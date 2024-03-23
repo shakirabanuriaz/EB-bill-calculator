@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EB bill calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="heading">
+            <h1>
+                TNEB Bill calculator
+            </h1>
+
+        </div>
+
+        <div class="usage_amount">
+
+            <h2>
+                Units Consumed:
+            </h2>
+
+            <input type="number" placeholder="Enter the units" name="unit" id="units">
+
+            <button type="button" class="calc_btn" onclick="return calculateEbBill()">Calculate</button>
+
+            <div class="bill_amt">
+                <p>Bill amount:<span id="totalAmt"></span></p>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <div class="container">
+
+        <div class="table_details">
+
+            <table class="eb_tariff">
+
+                <thead>
+                    <tr>
+                        <th rowspan="2">Units<br>(<i>u</i>)</th>
+                        <th rowspan="2">Subsidy<br>(≤ 100 <i>u</i>)</th>
+                        <th colspan="2">Unit Range </th>
+                        <th rowspan="2">Unit<br>Cost</th>
+                    </tr>
+                    <tr>
+                        <th>From</th>
+                        <th>To</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>≤100</td>
+                        <td>₹ 4.50 x <i>u</i></td>
+                        <td>1</td>
+                        <td>100</td>
+                        <td>₹ 0.00</td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td rowspan="2">≤ 200</td>
+                        <td rowspan="2">₹ 450</td>
+                        <td>1</td>
+                        <td>100</td>
+                        <td>₹ 0.00</td>
+                    </tr>
+
+                    <tr>
+                        <td>101</td>
+                        <td>200 </td>
+                        <td>₹ 2.25</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="3">≤ 400</td>
+                        <td rowspan="3">₹ 450</td>
+                        <td>1</td>
+                        <td>100</td>
+                        <td>₹ 0.00</td>
+                    </tr>
+
+                    <tr>
+                        <td>101</td>
+                        <td>200 </td>
+                        <td>₹ 2.25</td>
+                    </tr>
+
+                    <tr>
+                        <td>201</td>
+                        <td>400 </td>
+                        <td>₹ 4.50</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="4">≤ 500</td>
+                        <td rowspan="4">₹ 450</td>
+                        <td>1</td>
+                        <td>100</td>
+                        <td>₹ 0.00</td>
+                    </tr>
+
+                    <tr>
+                        <td>101</td>
+                        <td>200 </td>
+                        <td>₹ 2.25</td>
+                    </tr>
+
+                    <tr>
+                        <td>201</td>
+                        <td>400 </td>
+                        <td>₹ 4.50</td>
+                    </tr>
+
+                    <tr>
+                        <td>401</td>
+                        <td>500 </td>
+                        <td>₹ 6.00</td>
+                    </tr>
+
+                </tbody>
+
+
+            </table>
+        </div>
+
+        <script src="bill.js"></script>
+</body>
+
+</html>
